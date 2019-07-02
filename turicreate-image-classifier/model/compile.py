@@ -20,8 +20,12 @@ parser.add_argument('--output', type=str, default='coreml')
 args = parser.parse_args()
 
 # Parse config
-config = configparser.ConfigParser()
-config.read('config.ini')
+config = ""
+with open("config.yaml", 'r') as stream:
+    try:
+        config=yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
 c = dict(config['DEFAULT'].items())
 
 # Load Config and Args

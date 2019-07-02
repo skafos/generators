@@ -9,7 +9,7 @@ config.ini file for details on where things are hooked up.
 ####
 import os
 import argparse
-import configparser
+import yaml
 import turicreate as tc
 
 # Parse (optional) args
@@ -26,20 +26,25 @@ parser.add_argument('--gpu', type=int, default=None)
 args = parser.parse_args()
 
 # Parse config
-config = configparser.ConfigParser()
-config.read('config.ini')
-c = dict(config['TRAIN'].items())
+config = ""
+with open("config.yaml", 'r') as stream:
+    try:
+        config=yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
+c_default = dict(config['DEFAULT'].items())
+c_train = dict(config['TRAIN'].items())
 
 # Load Config File by Default
 dataset = args.dataset
 save_dataset = args.save_dataset
-data_path = args.data_path or c['data_path']
-artifacts_path = args.artifacts_path or c['artifacts_path']
-model_name = args.model_name or c['model_name']
-training_split = args.training_split or float(c['training_split'])
-epochs = args.epochs or int(c['epochs'])
-batch_size = args.batch_size or int(c['batch_size'])
-gpu = args.gpu or int(c['gpu'])
+data_path = args.data_path or c_default['data_path']
+artifacts_path = args.artifacts_path or c_default['artifacts_path']
+model_name = args.model_name or c_default['model_name']
+training_split = args.training_split or float(c_train['training_split'])
+epochs = args.epochs or int(c_train['epochs'])
+batch_size = args.batch_size or int(c_train['batch_size'])
+gpu = args.gpu or int(c_train['gpu'])
 
 ####
 # MODEL TRAINING CODE
@@ -93,3 +98,4 @@ if __name__ == "__main__":
     print("Saving model")
     model.save(artifacts_path + model_name)
     print("Done")
+    print("Generated with Love by Skafos")
