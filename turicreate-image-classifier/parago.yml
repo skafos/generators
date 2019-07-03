@@ -1,0 +1,19 @@
+env:
+  data_path: data/
+  artifacts_path: artifacts/
+  model_name: ImageClassifier
+  training_split: 0.8
+  epochs: 10
+  batch_size: 64
+  gpu: 0
+  bucket: None
+
+
+train:
+  - python src/train.py
+compile:
+  - python src/compile.py
+#clean-data:
+#  - python src/clean_data.py
+#load-data:
+#  - python src/load_data.py
