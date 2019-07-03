@@ -20,12 +20,15 @@ parser.add_argument('--output', type=str, default='coreml')
 args = parser.parse_args()
 
 # Parse config
-config = configparser.ConfigParser()
-config.read('config.ini')
-c = dict(config['DEFAULT'].items())
+config = ""
+with open("config.yaml", 'r') as stream:
+    try:
+        config=yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
 
 # Load Config and Args
-artifacts_path = args.artifacts_path or c['artifacts_path']
+artifacts_path = args.artifacts_path or config['DEFAULT']['artifacts_path']
 output = args.output
 model_name = args.model_name
 if not model_name or not os.path.exists(artifacts_path + model_name):
