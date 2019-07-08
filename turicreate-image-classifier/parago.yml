@@ -8,12 +8,14 @@ env:
   gpu: 0
   bucket: None
 
-
-train:
-  - python src/train.py
-compile:
-  - python src/compile.py
-#clean-data:
-#  - python src/clean_data.py
-#load-data:
-#  - python src/load_data.py
+commands:
+  - train:
+    - python src/train.py
+  - export:
+    - python src/compile.py
+  - data-load:
+    - python src/data_load.py
+    
+#tasks:
+#  - validate-data:
+#    - python src/validate_data.py
