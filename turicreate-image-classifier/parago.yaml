@@ -1,4 +1,5 @@
 name: turicreate-image-classifier
+description: Python-based project to train a resnet Image Classifier model via Turi Create.
 version:  0.0.0
 author: Tyler Hutcherson <tyler.hutcherson@skafos.ai>
 license: MIT
