@@ -1,39 +1,44 @@
-# TuriCreate Image Classifier
+# TuriCreate Image Classifier Generator
 
-This is a Skafos Generator package for a TuriCreate Image Classifier.
+Parago ML Generator for a TuriCreate Image Classifier.
 
 ## Installation
 
-Use the package manager [Homebrew](https://brew.sh/) to install skafos.
+Use the package manager [Homebrew](https://brew.sh/) to install parago.
 
 ```bash
-brew install ska
+brew install parago
 ```
 
 ## Usage
 
+Create a project from this generator.
 ```bash
-ska <your-model-name> --generator=turicreate-image-classifier
+pgo create <name> --generator=turicreate-image-classifier
 ```
 
-Train your model from raw data in the `data/` folder
+Load the default Cats & Dogs dataset to play right out-of-the-box.
 ```bash
-ska train --epochs 20 --batch_size 32
+pgo data load
 ```
 
-Train your model from a previously processed dataset
+Train an image classification model on images in the `data/` folder.
 ```bash
-ska train --epochs 20 --batch_size 32 --dataset mydata.sframe
+pgo train --env epochs=20,batch_size=32,gpu=1
 ```
 
+Export your trained model to coreML format
 ```bash
-ska compile ImageClassifier --output coreml
+pgo export --env output=coreml
+```
+
+Clear out the `data/` directory so you can add your own images and retrain.
+```bash
+pgo data clean
 ```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
 
 ## License
 [APACHE 2](https://choosealicense.com/licenses/apache-2.0/)
