@@ -10,13 +10,13 @@ import os
 import turicreate as tc
 
 # Load Training Attributes
-data_path = "data/" #os.environ["data_path"]
-artifacts_path = "artifacts/" #os.environ["artifacts_path"]
-model_name = "ImageClassifier" #os.environ["model_name"]
-training_split = 0.8 #float(os.environ["training_split"])
-epochs = 10 #int(os.environ["epochs"])
-batch_size = 64 #int(os.environ["batch_size"])
-gpu = 1 #int(os.environ["gpu"])
+data_path = os.environ["data_path"]
+artifacts_path = os.environ["artifacts_path"]
+model_name = os.environ["model_name"]
+training_split = float(os.environ["training_split"])
+epochs = int(os.environ["epochs"])
+batch_size = int(os.environ["batch_size"])
+gpu = int(os.environ["gpu"])
 
 
 ####

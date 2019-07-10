@@ -13,8 +13,8 @@ import urllib.request
 import tarfile
 
 # Load Data Load Attributes
-data_path = "data/" #os.environ["data_path"]
-data_src = "cats_dogs" #os.environ["data_src"]
+data_path = os.environ["data_path"]
+data_src = os.environ["data_src"]
 
 data_sources = {
     "cats_dogs": "https://s3.amazonaws.com/skafos.example.data/ImageClassifier/PetImages.tar.gz",

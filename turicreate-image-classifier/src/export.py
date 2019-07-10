@@ -12,9 +12,9 @@ import turicreate as tc
 
 
 # Load Export Attributes
-artifacts_path = "artifacts/" #os.environ["artifacts_path"]
-output = "coreml" #os.environ["output"]
-model_name = "ImageClassifier" #os.environ["model_name"]
+artifacts_path = os.environ["artifacts_path"]
+output = os.environ["output"]
+model_name = os.environ["model_name"]
 if not model_name or not os.path.exists(artifacts_path + model_name):
     sys.exit("Must provide the name of the model to compile.")
 

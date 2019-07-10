@@ -11,7 +11,7 @@ import sys
 import shutil
 
 # Load Data Clean Attributes
-data_path = "data/" #os.environ["data_path"]
+data_path = os.environ["data_path"]
 
 
 ####
