@@ -1,0 +1,22 @@
+name: turicreate-image-classifier
+version:  0.0.0
+author: Tyler Hutcherson <tyler.hutcherson@skafos.ai>
+license: MIT
+system:
+  language: python >= 3.3
+env:
+  data_path: data/
+  artifacts_path: artifacts/
+  data_src: cats_dogs
+  model_name: ImageClassifier
+  output: coreml
+  training_split: 0.8
+  epochs: 10
+  batch_size: 64
+  gpu: 0
+commands:
+  data:
+    load: python src/data_load.py
+    clean: python src/data_clean.py
+  train: python src/train.py
+  export: python src/export.py
