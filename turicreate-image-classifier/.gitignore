@@ -1,5 +1,3 @@
 ###########  Deployment stuff ##################
-artifacts/*
-data/*
 .DS_Store
 .idea
