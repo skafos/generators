@@ -4,7 +4,7 @@ version:  0.0.0
 author: Tyler Hutcherson <tyler.hutcherson@skafos.ai>
 license: MIT
 system:
-  language: python >= 3.3
+  language: python >= 3.5
 env:
   data_path: data/
   artifacts_path: artifacts/
