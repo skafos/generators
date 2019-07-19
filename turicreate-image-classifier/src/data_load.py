@@ -29,8 +29,16 @@ data_sources = {
 if __name__ == "__main__":
     print("\n##### Loading Image Classifier Sample Data #####", flush=True)
 
-    if os.listdir(data_path):
-        sys.exit("Your data/ directory is not empty. Run data-clean first!")
+    existing_files = os.listdir(data_path)
+
+    if existing_files:
+        if (len(existing_files) == 1) and existing_files[0] == ".gitkeep":
+            pass
+        elif (len(existing_files) == 1) and existing_files[0] != ".gitkeep":
+            sys.exit("Your data/ directory is not empty. Run data-clean first!")
+        elif len(existing_files) > 1:
+            sys.exit("Your data/ directory is not empty. Run data-clean first!")
+
 
     # Specify the data set download url and path
     data_url = data_sources.get(data_src)

@@ -24,6 +24,8 @@ if __name__ == "__main__":
         v = input("Are you sure you want to clean all data in the {} directory (y/n):".format(data_path))
         if v.lower().strip() in ("y", "yes"):
             for f in os.listdir(data_path):
+                if f == ".gitkeep":
+                    continue
                 f_path = os.path.join(data_path, f)
                 try:
                     if os.path.isfile(f_path):
