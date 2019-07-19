@@ -21,7 +21,7 @@ app_name = str(input("Enter your Skafos App Name: "))
 model_name = str(input("Enter your Skafos Model Name: "))
 description = input("Enter a description: ")
 
-if not model_name or not os.path.exists(artifacts_path + model_name):
+if not file or not os.path.exists(artifacts_path + file):
     sys.exit("Must provide a valid name of a model to upload.")
 
 ####
