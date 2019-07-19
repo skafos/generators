@@ -21,3 +21,4 @@ commands:
     clean: python src/data_clean.py
   train: python src/train.py
   export: python src/export.py
+  deploy: python src/deploy.py
