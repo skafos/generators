@@ -32,12 +32,12 @@ if __name__ == "__main__":
 
     # Upload with skafossdk
     res = models.upload_version(
-        files=file,
+        files=artifacts_path + file,
         description=description,
         skafos_api_token=api_token,
         org_name=org_name,
         app_name=app_name,
         model_name=model_name
     )
-    
+
 print("Done.", flush=True)
