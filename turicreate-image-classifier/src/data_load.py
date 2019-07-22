@@ -29,7 +29,7 @@ data_sources = {
 if __name__ == "__main__":
     print("\n##### Loading Image Classifier Sample Data #####", flush=True)
 
-    existing_files = [file for file in os.listdir(data_path) if not file.startswith(".")
+    existing_files = [file for file in os.listdir(data_path) if not file.startswith(".")]
 
     if existing_files:
         sys.exit("Your data/ directory is not empty. Run data-clean first!")
@@ -53,9 +53,11 @@ if __name__ == "__main__":
 
     # Move all image class folders up a level
     for cls in os.listdir(data_path + images_path):
+        if cls.startswith("."):
+            continue
         f = data_path + images_path + cls
         shutil.move(f, data_path)
-        
+
     # Remove old artifact
     shutil.rmtree(data_path + images_path)
 

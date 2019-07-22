@@ -18,7 +18,7 @@ epochs = int(os.environ["epochs"])
 batch_size = int(os.environ["batch_size"])
 gpu = int(os.environ["gpu"])
 
-assert os.listdir(data_path), "Data directory is empty. Nothing to train with.")
+assert os.listdir(data_path), "Data directory is empty. Nothing to train with."
 
 ####
 # MODEL TRAINING CODE
@@ -30,20 +30,20 @@ if __name__ == "__main__":
         tc.config.set_num_gpus(gpu)
 
     # Load the data
-    print("...Loading images into an sframe", flush=True)
+    print("Loading images into an sframe", flush=True)
     data = tc.image_analysis.load_images(data_path, with_path=True)
     data["label"] = data["path"].apply(lambda path: os.path.basename(os.path.dirname(path)))
 
     # Make a train-test split for evaluation purposes
     if training_split:
-        print("...Using {} of the provided data for training".format(training_split), flush=True)
+        print("Using {} of the provided data for training".format(training_split), flush=True)
         train_data, test_data = data.random_split(training_split)
     else:
         train_data = data
         test_data = None
 
     # Train the model
-    print("...Training the image classifier for {} epochs with in batches of {}\n".format(epochs, batch_size), flush=True)
+    print("Training the image classifier for {} epochs with in batches of {}\n".format(epochs, batch_size), flush=True)
     model = tc.image_classifier.create(
         dataset=train_data,
         target="label",
