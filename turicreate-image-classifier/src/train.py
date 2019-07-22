@@ -18,6 +18,7 @@ epochs = int(os.environ["epochs"])
 batch_size = int(os.environ["batch_size"])
 gpu = int(os.environ["gpu"])
 
+assert os.listdir(data_path), "Data directory is empty. Nothing to train with.")
 
 ####
 # MODEL TRAINING CODE
@@ -29,8 +30,6 @@ if __name__ == "__main__":
         tc.config.set_num_gpus(gpu)
 
     # Load the data
-    if not os.listdir(data_path):
-        sys.exit("data/ folder is empty... Try running data-load or add your own image folders")
     print("...Loading images into an sframe", flush=True)
     data = tc.image_analysis.load_images(data_path, with_path=True)
     data["label"] = data["path"].apply(lambda path: os.path.basename(os.path.dirname(path)))
