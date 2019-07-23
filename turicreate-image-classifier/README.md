@@ -4,20 +4,30 @@ Parago ML Generator for a TuriCreate Image Classifier.
 
 ## Installation
 
-Use the package manager [Homebrew](https://brew.sh/) to install parago.
+Use the [Node package manager](https://www.npmjs.com/package/parago) to install parago.
 
 ```bash
-brew install parago
+npm install -g parago
 ```
+
 
 ## Usage
 
+### Create Porject
 Create a project from this generator.
 ```bash
-pgo create <name> --generator=turicreate-image-classifier
+pgo create <name> -g turicreate-image-classifier
 ```
 
-Load the default Cats & Dogs dataset to play right out-of-the-box.
+### Environment Setup
+Use the prepared [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html) environment to run all commands with this generator:
+```
+conda env create -f environment.yml
+conda activate turicreate-image-classifier
+```
+
+### Other Commands
+Load the default Cats & Dogs dataset to use right out-of-the-box.
 ```bash
 pgo data load
 ```
@@ -27,9 +37,14 @@ Train an image classification model on images in the `data/` folder.
 pgo train --env epochs=20,batch_size=32,gpu=1
 ```
 
-Export your trained model to coreML format
+Export your trained model to Core ML format
 ```bash
 pgo export --env output=coreml
+```
+
+Deploy your Core ML artifact with Skafos:
+```bash
+pgo deploy
 ```
 
 Clear out the `data/` directory so you can add your own images and retrain.
