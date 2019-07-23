@@ -14,10 +14,10 @@ artifacts_path = os.environ["artifacts_path"]
 
 # Get other variables from user
 file = input("Enter the model filename in the artifacts/ folder to upload: ")
-api_token = str(input("Enter your Skafos API TOKEN: "))
-org_name = str(input("Enter your Skafos Org Name: "))
-app_name = str(input("Enter your Skafos App Name: "))
-model_name = str(input("Enter your Skafos Model Name: "))
+api_token = input("Enter your Skafos API TOKEN: ")
+org_name = input("Enter your Skafos Org Name: ")
+app_name = input("Enter your Skafos App Name: ")
+model_name = input("Enter your Skafos Model Name: ")
 description = input("Enter a description: ")
 
 assert file, "Must provide a valid model file to upload."
