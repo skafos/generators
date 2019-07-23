@@ -17,6 +17,7 @@ npm install -g parago
 Create a project from this generator.
 ```bash
 pgo create <name> -g turicreate-image-classifier
+cd <name>
 ```
 
 ### Environment Setup
