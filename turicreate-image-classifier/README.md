@@ -13,7 +13,7 @@ npm install -g parago
 
 ## Usage
 
-### Create Porject
+### Create Project
 Create a project from this generator.
 ```bash
 pgo create <name> -g turicreate-image-classifier
@@ -38,7 +38,7 @@ Train an image classification model on images in the `data/` folder.
 pgo train --env epochs=20,batch_size=32,gpu=1
 ```
 
-Export your trained model to Core ML format
+Export your trained model to Core ML format:
 ```bash
 pgo export --env output=coreml
 ```
