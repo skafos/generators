@@ -1,0 +1,36 @@
+name: tf-image-classifier
+description: Train Image Classifier models via Tensorflow.
+version:  0.0.1
+author: Tyler Hutcherson <tyler.hutcherson@skafos.ai>
+license: MIT
+system:
+  language: python == 3.6
+env:
+  data_path: data/
+  artifacts_path: artifacts/
+  data_src: cats_dogs
+  model_name: ImageClassifier
+  output: coreml
+  epochs: 4000
+  learning_rate: 0.01
+  testing_percentage: 10
+  validation_percentage: 10
+  eval_step_interval: 10
+  train_batch_size: 100
+  test_batch_size: -1
+  validation_batch_size: 100
+  print_misclassified_test_images: False
+  final_tensor_name: final_result
+  flip_left_right: False
+  random_crop: 0
+  random_scale: 0
+  random_brightness: 0
+  tfhub_module: https://tfhub.dev/google/imagenet/resnet_v2_50/feature_vector/3
+  logging_verbosity: WARN
+commands:
+  data:
+    load: python src/data_load.py
+    clean: python src/data_clean.py
+  train: python src/train.py
+  export: python src/export.py
+  deploy: python src/deploy.py

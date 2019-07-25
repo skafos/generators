@@ -1,0 +1,56 @@
+name: tf-image-classifier
+channels:
+  - defaults
+dependencies:
+  - blas=1.0=mkl
+  - ca-certificates=2019.5.15=0
+  - certifi=2019.6.16=py36_0
+  - intel-openmp=2019.4=233
+  - libcxx=4.0.1=hcfea43d_1
+  - libcxxabi=4.0.1=hcfea43d_1
+  - libedit=3.1.20181209=hb402a30_0
+  - libffi=3.2.1=h475c297_4
+  - libgfortran=3.0.1=h93005f0_2
+  - mkl=2019.4=233
+  - mkl_fft=1.0.12=py36h5e564d8_0
+  - mkl_random=1.0.2=py36h27c97d8_0
+  - ncurses=6.1=h0a44026_1
+  - numpy=1.16.4=py36hacdab7b_0
+  - numpy-base=1.16.4=py36h6575580_0
+  - openssl=1.0.2s=h1de35cc_0
+  - pip=9.0.1=py36_5
+  - python=3.6.4=hc167b69_3
+  - readline=7.0=h1de35cc_5
+  - setuptools=41.0.1=py36_0
+  - sqlite=3.29.0=ha441bb4_0
+  - tk=8.6.8=ha441bb4_0
+  - wheel=0.33.4=py36_0
+  - xz=5.2.4=h1de35cc_4
+  - zlib=1.2.11=h1de35cc_3
+  - pip:
+    - absl-py==0.7.1
+    - astor==0.8.0
+    - chardet==3.0.4
+    - coremltools==2.1.0
+    - gast==0.2.2
+    - google-pasta==0.1.7
+    - grpcio==1.22.0
+    - h5py==2.9.0
+    - idna==2.8
+    - keras-applications==1.0.8
+    - keras-preprocessing==1.1.0
+    - markdown==3.1.1
+    - protobuf==3.9.0
+    - requests==2.21.0
+    - six==1.12.0
+    - skafos==0.2.1
+    - tensorboard==1.14.0
+    - tensorflow==1.14.0
+    - tensorflow-estimator==1.14.0
+    - tensorflow-hub==0.5.0
+    - termcolor==1.1.0
+    - tfcoreml==0.3.0
+    - urllib3==1.24.3
+    - werkzeug==0.15.5
+    - wrapt==1.11.2
+

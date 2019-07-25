@@ -1,6 +1,6 @@
-# TuriCreate Image Classifier Generator
+# TensorFlow Image Classifier Generator
 
-Parago ML Generator for a TuriCreate Image Classifier.
+Parago ML Generator for a TensorFlow Image Classifier.
 
 ## Installation
 
@@ -10,13 +10,12 @@ Use the [Node package manager](https://www.npmjs.com/package/parago) to install 
 npm install -g parago
 ```
 
-
 ## Usage
 
 ### Create Project
 Create a project from this generator.
 ```bash
-pgo create <name> -g turicreate-image-classifier
+pgo create <name> -g tf-image-classifier
 cd <name>
 ```
 
@@ -24,7 +23,7 @@ cd <name>
 Use the prepared [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html) environment to run all commands with this generator:
 ```
 conda env create -f environment.yml
-conda activate turicreate-image-classifier
+conda activate tf-image-classifier
 ```
 
 ### Other Commands
@@ -35,7 +34,7 @@ pgo data load --env data_src=cats_dogs
 
 Train an image classification model on images in the `data/` folder.
 ```bash
-pgo train --env epochs=20,batch_size=32,gpu=1
+pgo train --env epochs=30,train_batch_size=128
 ```
 
 Export your trained model to Core ML format:
