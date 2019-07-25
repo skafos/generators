@@ -18,8 +18,7 @@ data_src = os.environ["data_src"]
 
 data_sources = {
     "cats_dogs": "https://s3.amazonaws.com/skafos.example.data/ImageClassifier/PetImages.tar.gz",
-    "more_pets": "https://s3.amazonaws.com/skafos.example.data/ImageClassifier/MorePets.tar.gz",
-    "poison_plants": "https://s3.amazonaws.com/skafos.example.data/ImageClassifier/poisonPlants.tar.gz"
+    "more_pets": "https://s3.amazonaws.com/skafos.example.data/ImageClassifier/MorePets.tar.gz"
 }
 
 

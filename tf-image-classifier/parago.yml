@@ -1,6 +1,6 @@
 name: tf-image-classifier
 description: Train Image Classifier models via Tensorflow.
-version:  0.0.0
+version:  0.0.1
 author: Tyler Hutcherson <tyler.hutcherson@skafos.ai>
 license: MIT
 system:

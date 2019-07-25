@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     # Upload with skafossdk
     res = models.upload_version(
-        files=artifacts_path + file,
+        files=[artifacts_path + file, artifacts_path + "output_labels.txt"],
         description=description,
         skafos_api_token=api_token,
         org_name=org_name,
