@@ -1,6 +1,6 @@
-# TuriCreate Image Classifier Generator
+# TensorFlow Image Classifier Generator
 
-Parago ML Generator for a TuriCreate Image Classifier.
+Parago ML Generator for a TensorFlow Image Classifier.
 
 ## Installation
 
@@ -34,7 +34,7 @@ pgo data load --env data_src=cats_dogs
 
 Train an image classification model on images in the `data/` folder.
 ```bash
-pgo train --env epochs=20,batch_size=32,gpu=1
+pgo train --env epochs=30,train_batch_size=128
 ```
 
 Export your trained model to Core ML format:

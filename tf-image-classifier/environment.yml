@@ -1,0 +1,13 @@
+name: tf-image-classifier
+channels:
+    - defaults
+dependencies:
+    - python=3.6.4
+    - pip=9.0.1
+    - numpy
+    - pip:
+        - skafos
+        - tfcoreml
+        - coremltools
+        - tensorflow
+        - tensorflow-gpu==1.14.0
