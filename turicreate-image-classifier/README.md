@@ -15,7 +15,7 @@ npm install -g parago
 ### Create Project
 Create a project from this generator.
 ```bash
-pgo create <name> -g tf-image-classifier
+pgo create <name> -g turicreate-image-classifier
 cd <name>
 ```
 
@@ -23,7 +23,7 @@ cd <name>
 Use the prepared [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html) environment to run all commands with this generator:
 ```
 conda env create -f environment.yml
-conda activate tf-image-classifier
+conda activate turicreate-image-classifier
 ```
 
 ### Other Commands
