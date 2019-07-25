@@ -1,2 +1,3 @@
 generators:
-- turicreate-image-classifier: this is a description
+- turicreate-image-classifier: Train an image classifier with turi create.
+- tf-image-classifier: Train an image classifier with tensorflow.
