@@ -10,7 +10,7 @@ import os
 import shutil
 
 # Load Data Clean Attributes
-data_path = "data/"#os.environ["data_path"]
+data_path = os.environ["data_path"]
 assert os.path.exists(data_path), "Data directory path doesn't exist."
 
 ####
