@@ -10,10 +10,10 @@ import os
 import tfcoreml as tf_converter
 
 # Load Export Attributes
-artifacts_path = "artifacts/"#os.environ["artifacts_path"]
-output = "coreml"#os.environ["output"]
-model_name = "ImageClassifier"#os.environ["model_name"]
-final_tensor_name = "final_result"#os.environ["final_tensor_name"]
+artifacts_path = os.environ["artifacts_path"]
+output = os.environ["output"]
+model_name = os.environ["model_name"]
+final_tensor_name = os.environ["final_tensor_name"]
 
 assert output == 'coreml', "Sorry! Other output formats are not yet supported!"
 
