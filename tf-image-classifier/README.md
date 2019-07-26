@@ -37,6 +37,11 @@ Train an image classification model on images in the `data/` folder.
 pgo train --env epochs=30,train_batch_size=128
 ```
 
+Watch your model train live with tensorboard:
+```bash
+tensorboard --logdir artifacts/retrain_logs
+```
+
 Export your trained model to Core ML format:
 ```bash
 pgo export --env output=coreml
