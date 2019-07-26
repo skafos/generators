@@ -12,7 +12,7 @@ env:
   model_name: ImageClassifier
   intermediate_store_frequency: 0
   output: coreml
-  epochs: 4000
+  epochs: 100
   learning_rate: 0.01
   testing_percentage: 10
   validation_percentage: 10
@@ -35,3 +35,5 @@ commands:
   train: python src/train.py
   export: python src/export.py
   deploy: python src/deploy.py
+tasks:
+  watch: tensorboard --logdir artifacts/retrain_logs

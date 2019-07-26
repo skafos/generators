@@ -15,46 +15,46 @@ npm install -g parago
 ### Create Project
 Create a project from this generator.
 ```bash
-pgo create <name> -g tf-image-classifier
-cd <name>
+$ pgo create <name> -g tf-image-classifier
+$ cd <name>
 ```
 
 ### Environment Setup
 Use the prepared [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/macos.html) environment to run all commands with this generator:
-```
-conda env create -f environment.yml
-conda activate tf-image-classifier
+```bash
+$ conda env create -f environment.yml
+$ conda activate tf-image-classifier
 ```
 
 ### Other Commands
 Load the default Pets dataset to use right out-of-the-box.
 ```bash
-pgo data load
+$ pgo data load
 ```
 
 Train an image classification model on images in the `data/` folder.
 ```bash
-pgo train --env epochs=30,train_batch_size=128
+$ pgo train --env epochs=30,train_batch_size=128
 ```
 
-Watch your model train live with tensorboard:
+Open up another terminal in this directory (with same conda env) and watch your model train in the browser:
 ```bash
-tensorboard --logdir artifacts/retrain_logs
+$ pgo run watch
 ```
 
 Export your trained model to Core ML format:
 ```bash
-pgo export --env output=coreml
+$ pgo export --env output=coreml
 ```
 
 Deploy your Core ML artifact with Skafos:
 ```bash
-pgo deploy
+$ pgo deploy
 ```
 
 Clear out the `data/` directory so you can add your own images and retrain.
 ```bash
-pgo data clean
+$ pgo data clean
 ```
 
 ## Contributing
