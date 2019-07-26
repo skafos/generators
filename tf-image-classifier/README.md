@@ -27,9 +27,9 @@ conda activate tf-image-classifier
 ```
 
 ### Other Commands
-Load the default Cats & Dogs dataset to use right out-of-the-box.
+Load the default Pets dataset to use right out-of-the-box.
 ```bash
-pgo data load --env data_src=cats_dogs
+pgo data load
 ```
 
 Train an image classification model on images in the `data/` folder.

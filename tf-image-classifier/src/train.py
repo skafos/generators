@@ -1,3 +1,11 @@
+"""
+train
+
+Train a turicreate image classifier on data in the data/ directory.
+"""
+####
+# TRAINING CONFIGURATION
+####
 import os
 import collections
 from datetime import datetime
