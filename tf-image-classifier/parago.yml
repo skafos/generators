@@ -27,7 +27,7 @@ env:
   random_scale: 0
   random_brightness: 0
   tfhub_module: https://tfhub.dev/google/imagenet/resnet_v2_50/feature_vector/3
-  logging_verbosity: WARN
+  logging_verbosity: INFO
 commands:
   data:
     load: python src/data_load.py
