@@ -8,7 +8,7 @@ system:
 env:
   data_path: data/
   artifacts_path: artifacts/
-  data_src: cats_dogs
+  data_src: more_pets
   model_name: ImageClassifier
   output: coreml
   epochs: 4000
