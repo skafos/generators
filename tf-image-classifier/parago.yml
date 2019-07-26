@@ -10,6 +10,7 @@ env:
   artifacts_path: artifacts/
   data_src: more_pets
   model_name: ImageClassifier
+  intermediate_store_frequency: 0
   output: coreml
   epochs: 4000
   learning_rate: 0.01
