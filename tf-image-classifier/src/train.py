@@ -1085,5 +1085,6 @@ def main():
 
 if __name__ == '__main__':
     print("\n##### Training TensorFlow ImageClassification Model #####", flush=True)
+    print("Training model for {} steps...".format(FLAGS.epochs), flush=True)
     main()
     print("Done.")
