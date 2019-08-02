@@ -27,7 +27,8 @@ if __name__ == "__main__":
     tf_converter.convert(
         tf_model_path=artifacts_path + model_name + ".pb",
         mlmodel_path=coreml_model_name,
-        output_feature_names=[final_tensor_name + ":0"]
+        output_feature_names=[final_tensor_name + ":0"],
+        image_input_names="image__0"
     )
 
     print("Done.", flush=True)
