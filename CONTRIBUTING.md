@@ -1,5 +1,5 @@
 # Contributing
-Thanks for helping out! Making Parago Generators will eventually be a more automated process. We want to make sure the defalt file structure and command templates work well. Please send us feedback/ideas so we can get that ironed out soon! In the meantime, please follow these guidelines and steps to create
+Thanks for helping out! Making Parago Generators will eventually be a more automated process. We want to make sure the default file structure and command templates work well. Please send us feedback/ideas so we can get that ironed out soon! In the meantime, please follow these guidelines and steps to create
 
 ## Making a Generator
 ### Requirements
