@@ -1,7 +1,7 @@
 '''
 export
 
-Convert a trained image classifier to another format (CoreML, TF-Lite, etc)
+Convert a trained image similarity model to another format (CoreML, TF-Lite, etc)
 '''
 ####
 # EXPORT CONFIGURATION
@@ -22,7 +22,7 @@ assert os.path.exists(artifacts_path + model_name), "Must provide the name of th
 # MODEL EXPORT CODE
 ####
 if __name__ == "__main__":
-    print("\n##### Exporting Image Classifier Model #####", flush=True)
+    print("\n##### Exporting Image Similarity Model #####", flush=True)
     print("Loading model", flush=True)
 
     model = tc.load_model(artifacts_path + model_name)

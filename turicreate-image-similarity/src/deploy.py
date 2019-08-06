@@ -1,7 +1,7 @@
 '''
 deploy
 
-Upload a trained image classifier to the Skafos platform to deploy to iOS
+Upload a trained image similarity model to the Skafos platform to deploy to iOS
 '''
 ####
 # DEPLOY CONFIGURATION
@@ -27,7 +27,7 @@ assert os.path.exists(artifacts_path + file), "Must provide a valid model file t
 # MODEL DEPLOY CODE
 ####
 if __name__ == "__main__":
-    print("\n##### Deploying Image Classifier Model to Skafos #####", flush=True)
+    print("\n##### Deploying Image Similarity Model to Skafos #####", flush=True)
 
     # Upload with skafossdk
     res = models.upload_version(
