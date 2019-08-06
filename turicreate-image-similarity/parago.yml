@@ -1,0 +1,22 @@
+name: turicreate-image-similarity
+description: Python-based project to train an Image Similarity model via Turi Create.
+version:  0.0.0
+author: Tyler Hutcherson <tyler.hutcherson@skafos.ai>
+license: MIT
+system:
+  language: python == 3.6
+env:
+  data_path: data/
+  artifacts_path: artifacts/
+  data_src: zappos
+  model_name: ImageSimilarity
+  output: coreml
+  batch_size: 64
+  gpu: 0
+commands:
+  data:
+    load: python src/data_load.py
+    clean: python src/data_clean.py
+  train: python src/train.py
+  export: python src/export.py
+  deploy: python src/deploy.py
