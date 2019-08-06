@@ -30,7 +30,7 @@ conda activate turicreate-image-similarity
 ### Other Commands
 Load the default Zappos Boots dataset to use right out-of-the-box.
 ```bash
-pgo data load
+pgo data load --env data_src=zappos
 ```
 
 Train an image similarity model on boot images in the `data/` folder.
