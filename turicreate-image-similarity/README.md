@@ -38,12 +38,12 @@ Train an image similarity model on boot images in the `data/` folder.
 pgo train --env batch_size=32,gpu=1
 ```
 
-Export your trained model to Core ML format:
+Export your trained model to Core ML format.
 ```bash
 pgo export --env output=coreml
 ```
 
-Deploy your Core ML artifact with Skafos:
+Deploy your Core ML artifact with Skafos.
 ```bash
 pgo deploy
 ```
