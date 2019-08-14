@@ -12,6 +12,12 @@ npm install -g parago
 
 ## Usage
 
+### Setup
+If you haven't yet setup Parago, run this command:
+```bash
+$ pgo setup
+```
+
 ### Create Project
 Create a project from this generator.
 ```bash
